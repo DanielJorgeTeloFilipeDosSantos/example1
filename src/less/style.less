@@ -1,0 +1,46 @@
+@backgroudColor: darkblue;
+@primaryColor: white;
+@secundaryColor: grey;
+@lineHeight: 1em + 1em;
+
+// -----------------------normal react default css----------------------------
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-link {
+  color: red;
+}
+
+// -------------------------- less -------------------------
+
+.App-header {
+  background-color: @backgroudColor;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: @primaryColor;
+}
+
+.h2-extend {
+  color: @secundaryColor;
+}
+
+.color-inside-function(@color) {
+  color: @color;
+}
+
+h2:extend(.h2-extend) {
+  line-height: @lineHeight;
+  // .font-size-inside-function(500px);
+}
+h3 {
+  .color-inside-function(red);
+}
